@@ -1,0 +1,8 @@
+<tr>
+  <% Hospital::HEADERS.each do |column| %>
+    <td><%= hospital.send(column) %></td>
+  <% end %>
+  <td><%= link_to t(:edit), edit_hospital_path(hospital) %></td>
+  <td><%= link_to t(:publish), publish_hospital_path(hospital) %></td>
+  <td><%= link_to t(:destroy), hospital, method: :delete, data: {confirm: t(:are_you_sure)} %></td>
+</tr>
