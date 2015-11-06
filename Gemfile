@@ -22,6 +22,7 @@ gem 'mini_magick'
 gem 'state_machines-activerecord'
 gem 'rack-cors'
 gem 'figaro'
+gem 'ransack'
 
 group :development, :test do
   gem 'byebug'

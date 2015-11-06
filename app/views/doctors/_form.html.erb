@@ -13,6 +13,7 @@
     <%= f.input :desc %>
     <%= f.input :hospital %>
     <%= f.input :department %>
+    <%= f.input :state, collection: Doctor::STATES, selected: ["正常"] %>
     <%= f.input :password if @doctor.new_record? %>
     <%= f.input :password_confirmation if @doctor.new_record? %>
     <%= f.button :submit %>

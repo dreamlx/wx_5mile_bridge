@@ -1,0 +1,26 @@
+<%= search_form_for(@q, html: { class: 'form-horizontal' }, 
+    wrapper: :horizontal_form,
+    wrapper_mappings: {
+    check_boxes: :horizontal_radio_and_checkboxes,
+    radio_buttons: :horizontal_radio_and_checkboxes,
+    file: :horizontal_file_input,
+    boolean: :horizontal_boolean}) do |f| %>
+  <div class="col-md-2">
+    <%= f.input :name_cont, required: false, label: Doctor.human_attribute_name('name') %>
+  </div>
+  <div class="col-md-2">
+    <%= f.input :grade_eq, required: false, collection: Doctor::GRADES, label: Doctor.human_attribute_name('grade') %>
+  </div>
+  <div class="col-md-2">
+    <%= f.input :hospital_eq, required: false, collection: Doctor::HOSPITALS, label: Doctor.human_attribute_name('hospital') %>
+  </div>
+  <div class="col-md-2">
+    <%= f.input :department_eq, required: false, collection: Doctor::DEPARTMENTS, label: Doctor.human_attribute_name('department') %>
+  </div>
+  <div class="col-md-2">
+    <%= f.input :state_eq, required: false, collection: Doctor::STATES, label: Doctor.human_attribute_name('state') %>
+  </div>
+  <div class="col-md-2">
+    <%= f.button :submit %>
+  </div>
+<% end %>

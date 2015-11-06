@@ -31,7 +31,8 @@ class DoctorsController < ApplicationController
   end
 
   def index
-    @doctors = Doctor.all
+    @q = Doctor.ransack(params[:q])
+    @doctors = @q.result(distinct: true)
   end
 
   def destroy
@@ -42,7 +43,7 @@ class DoctorsController < ApplicationController
   private
     def doctor_params
       params.require(:doctor).permit(
-        :username, :name, :grade, :avatar, :desc, 
+        :username, :name, :grade, :avatar, :desc, :state,
         :hospital, :department, :password, :password_confirmation)
     end
 end
