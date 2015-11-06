@@ -1,0 +1,11 @@
+<tr>
+  <% User::HEADERS.each do |column| %>
+    <% if column == "doctor_id" %>
+      <td><%= user.doctor.name if user.doctor %></td>
+    <% else %>
+      <td><%= user.send(column) %></td>
+    <% end %>
+  <% end %>
+  <td><%= link_to t(:edit), edit_user_path(user) %></td>
+  <td><%= link_to t(:destroy), user, method: :delete, data: {confirm: t(:are_you_sure)} %></td>
+</tr>

@@ -15,6 +15,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="<%= 'active' if params[:controller] == 'doctors' %>"><%= link_to Doctor.model_name.human, doctors_path %></li>
+        <li class="<%= 'active' if params[:controller] == 'users' %>"><%= link_to User.model_name.human, users_path %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
       </ul>

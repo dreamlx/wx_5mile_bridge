@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   resources :doctors do
     get :edit_password, on: :member
   end
+  resources :users
 end

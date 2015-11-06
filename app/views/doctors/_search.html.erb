@@ -21,6 +21,6 @@
     <%= f.input :state_eq, required: false, collection: Doctor::STATES, label: Doctor.human_attribute_name('state') %>
   </div>
   <div class="col-md-2">
-    <%= f.button :submit %>
+    <%= f.button :submit, t(:search) %>
   </div>
 <% end %>

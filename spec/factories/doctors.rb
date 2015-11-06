@@ -3,11 +3,11 @@ FactoryGirl.define do
     username "MyString"
     name "MyString"
     grade "MyString"
-    avatar "MyString"
+    avatar File.open(File.join(Rails.root, 'spec/fixtures/rails.png'))
     desc "MyText"
     hospital "MyString"
     department "MyString"
-    state "MyString"
+    state "正常"
     password "foobar"
     password_confirmation "foobar"
   end

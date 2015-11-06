@@ -2,6 +2,7 @@ zh-CN:
   activerecord:
     models:
       doctor: 签约医生
+      user: 患者
     attributes:
       doctor:
         username: 用户名
@@ -16,6 +17,18 @@ zh-CN:
         password_confirmation: 确认密码
         created_at: 创建
         updated_at: 更新
+      user:
+        cell: 手机
+        name: 姓名
+        address: 地址
+        gender: 性别
+        id_no: 身份证号
+        card_no: 社保卡号
+        doctor_id: 签约医生
+        password: 密码
+        password_confirmation: 确认密码
+        created_at: 创建
+        updated_at: 更新
   5mile_bridge: 五里桥卫生院
   back: 返回
   are_you_sure: 请确认操作
@@ -26,3 +39,6 @@ zh-CN:
   destroy: 删除
   can_not_edit: 用户名，登陆使用。一旦创建，不能修改
   edit_password: 修改密码
+  search: 搜索
+  new_user: 新建用户
+  user_list: 用户列表
