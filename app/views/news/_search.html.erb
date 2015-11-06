@@ -1,0 +1,17 @@
+<%= search_form_for(@q, html: { class: 'form-horizontal' }, 
+    wrapper: :horizontal_form,
+    wrapper_mappings: {
+    check_boxes: :horizontal_radio_and_checkboxes,
+    radio_buttons: :horizontal_radio_and_checkboxes,
+    file: :horizontal_file_input,
+    boolean: :horizontal_boolean}) do |f| %>
+  <div class="col-md-4">
+    <%= f.input :title_cont, required: false, label: News.human_attribute_name('title') %>
+  </div>
+  <div class="col-md-4">
+    <%= f.input :content_cont, required: false, label: News.human_attribute_name('content') %>
+  </div>
+  <div class="col-md-4">
+    <%= f.button :submit, t(:search) %>
+  </div>
+<% end %>

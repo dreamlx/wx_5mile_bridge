@@ -7,4 +7,8 @@ Rails.application.routes.draw do
   resources :hospitals do
     get :publish, on: :member
   end
+  resources :news do
+    get :publish, on: :member
+    get :cancel, on: :member
+  end
 end

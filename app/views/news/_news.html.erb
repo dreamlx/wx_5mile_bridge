@@ -1,0 +1,9 @@
+<tr>
+  <% News::HEADERS.each do |column| %>
+    <td><%= news.send(column) %></td>
+  <% end %>
+  <td><%= link_to t(:edit), edit_news_path(news) %></td>
+  <td><%= link_to t(:publish), publish_news_path(news) %></td>
+  <td><%= link_to t(:cancel), cancel_news_path(news) %></td>
+  <td><%= link_to t(:destroy), news, method: :delete, data: {confirm: t(:are_you_sure)} %></td>
+</tr>

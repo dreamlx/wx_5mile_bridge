@@ -4,6 +4,7 @@ zh-CN:
       doctor: 签约医生
       user: 患者
       hospital: 医院
+      news: 快讯
     attributes:
       doctor:
         username: 用户名
@@ -38,6 +39,14 @@ zh-CN:
         state: 状态
         created_at: 创建
         updated_at: 更新
+      news:
+        title: 标题
+        img: 标题图片
+        content: 正文内容
+        video_url: 视频
+        state: 状态
+        created_at: 创建
+        updated_at: 更新
   5mile_bridge: 五里桥卫生院
   back: 返回
   are_you_sure: 请确认操作
@@ -54,3 +63,6 @@ zh-CN:
   hospital_list: 医院列表
   new_hospital: 新建医院
   publish: 发布
+  new_news: 新建快讯
+  news_list: 快讯列表
+  cancel: 撤消发布

@@ -1,0 +1,25 @@
+<div class="col-md-10">
+  <h3><%= t(:news_list) %></h3>
+</div>
+<div class="col-md-2">
+  <%= link_to t(:new_news), new_news_path, class: "btn btn-danger" %>
+</div>
+<div class="col-md-12">
+  <%= render 'search' %>
+</div>
+<div class="col-md-12">
+  <hr />
+  <table class="table">
+    <thead>
+      <tr>
+        <% News::HEADERS.each do |column| %>
+          <th><%= News.human_attribute_name(column) %></th>
+        <% end %>
+        <th colspan="4"><%= t(:operations) %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render @news %>
+    </tbody>
+  </table>
+</div>
