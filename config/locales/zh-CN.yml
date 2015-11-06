@@ -5,6 +5,7 @@ zh-CN:
       user: 患者
       hospital: 医院
       news: 快讯
+      advice: 健康教育
     attributes:
       doctor:
         username: 用户名
@@ -47,6 +48,15 @@ zh-CN:
         state: 状态
         created_at: 创建
         updated_at: 更新
+      advice:
+        title: 标题
+        img: 标题图片
+        content: 正文内容
+        video_url: 视频
+        advice_type: 类型
+        state: 状态
+        created_at: 创建
+        updated_at: 更新
   5mile_bridge: 五里桥卫生院
   back: 返回
   are_you_sure: 请确认操作
@@ -66,3 +76,5 @@ zh-CN:
   new_news: 新建快讯
   news_list: 快讯列表
   cancel: 撤消发布
+  new_advice: 新建健康教育
+  advice_list: 健康教育列表

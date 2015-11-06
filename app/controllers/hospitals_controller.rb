@@ -37,8 +37,7 @@ class HospitalsController < ApplicationController
   end
 
   def publish
-    @hospital = Hospital.find(params[:id])
-    @hospital.update(state: "发布")
+    Hospital.find(params[:id]).update(state: "发布")
     redirect_to hospitals_url
   end
 

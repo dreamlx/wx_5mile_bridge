@@ -11,4 +11,8 @@ Rails.application.routes.draw do
     get :publish, on: :member
     get :cancel, on: :member
   end
+  resources :advices do
+    get :publish, on: :member
+    get :cancel, on: :member
+  end
 end
