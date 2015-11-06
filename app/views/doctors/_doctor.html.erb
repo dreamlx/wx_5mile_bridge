@@ -1,0 +1,12 @@
+<tr>
+  <% Doctor::HEADERS.each do |column| %>
+    <% if column == "avatar" %>
+      <td><%= link_to image_tag(doctor.avatar.thumb), doctor.avatar.url %></td>
+    <% else %>
+      <td><%= doctor.send(column) %></td>
+    <% end %>
+  <% end %>
+  <td><%= link_to t(:edit), edit_doctor_path(doctor) %></td>
+  <td><%= link_to t(:edit_password), edit_password_doctor_path(doctor) %></td>
+  <td><%= link_to t(:destroy), doctor, method: :delete, data: {confirm: t(:are_you_sure)} %></td>
+</tr>

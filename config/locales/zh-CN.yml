@@ -1,0 +1,28 @@
+zh-CN:
+  activerecord:
+    models:
+      doctor: 签约医生
+    attributes:
+      doctor:
+        username: 用户名
+        name: 姓名
+        grade: 职称
+        avatar: 头像
+        desc: 介绍
+        hospital: 医院
+        department: 科室
+        state: 状态
+        password: 密码
+        password_confirmation: 确认密码
+        created_at: 创建
+        updated_at: 更新
+  5mile_bridge: 五里桥卫生院
+  back: 返回
+  are_you_sure: 请确认操作
+  operations: 操作
+  doctor_list: 签约医生列表
+  new_doctor: 新建签约医生
+  edit: 编辑
+  destroy: 删除
+  can_not_edit: 用户名，登陆使用。一旦创建，不能修改
+  edit_password: 修改密码

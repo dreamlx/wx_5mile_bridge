@@ -10,6 +10,18 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
+gem 'rails-i18n'
+gem 'bootstrap-sass'
+gem 'simple_form'
+gem "best_in_place"
+gem "jquery-ui-rails"
+gem 'carrierwave'
+gem 'qiniu-rs'
+gem 'carrierwave-qiniu'
+gem 'mini_magick'
+gem 'state_machines-activerecord'
+gem 'rack-cors'
+gem 'figaro'
 
 group :development, :test do
   gem 'byebug'
