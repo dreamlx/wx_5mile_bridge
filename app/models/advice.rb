@@ -4,4 +4,5 @@ class Advice < ActiveRecord::Base
   HEADERS = ["title", "img", "content", "video_url", "advice_type", "state", "created_at", "updated_at"]
   validates :state, inclusion: STATES
   validates :advice_type, inclusion: ADVICE_TYPES
+  mount_uploader :img, ImageUploader
 end

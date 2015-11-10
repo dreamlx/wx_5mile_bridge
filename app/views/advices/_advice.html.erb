@@ -1,6 +1,10 @@
 <tr>
   <% Advice::HEADERS.each do |column| %>
-    <td><%= advice.send(column) %></td>
+    <% if column == 'img' %>
+      <td><%= link_to image_tag(advice.img.thumb), advice.img.url if advice.img.url %></td>
+    <% else %>
+      <td><%= advice.send(column) %></td>
+    <% end %>
   <% end %>
   <td><%= link_to t(:edit), edit_advice_path(advice) %></td>
   <td><%= link_to t(:publish), publish_advice_path(advice) %></td>

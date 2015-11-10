@@ -1,3 +1,3 @@
 json.news do
-  json.partial! 'api/news/news', news: @news
+  json.partial! 'api/shared/item', item: @news
 end
