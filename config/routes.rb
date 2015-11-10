@@ -15,4 +15,5 @@ Rails.application.routes.draw do
     get :publish, on: :member
     get :cancel, on: :member
   end
+  resources :consults
 end

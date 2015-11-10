@@ -1,0 +1,8 @@
+<tr>
+  <% Consult::HEADERS.each do |column| %>
+    <td><%= consult.send(column) %></td>
+  <% end %>
+  <td><%= link_to t(:show), consult %></td>
+  <td><%= link_to t(:edit), edit_consult_path(consult) %></td>
+  <td><%= link_to t(:destroy), consult, method: :delete, data: {confirm: t(:are_you_sure)} %></td>
+</tr>
