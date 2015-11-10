@@ -25,5 +25,6 @@ Rails.application.routes.draw do
     resources :hospitals do
       get :current, on: :collection, defaults: {format: :json}
     end
+    resources :news, only: [:index, :show], defaults: {format: :json}
   end
 end

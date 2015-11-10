@@ -10,7 +10,7 @@ RSpec.describe "hospitals" do
       json = JSON.parse(response.body)["hospital"]
       expect(json["id"]).to eq hospital.id
       expect(json["title"]).to eq hospital.title
-      expect(json["img"]).to eq hospital.img
+      expect(json["img"]["img"]["url"]).to eq hospital.img.url
       expect(json["content"]).to eq hospital.content
       expect(json["video_url"]).to eq hospital.video_url
     end
@@ -24,7 +24,7 @@ RSpec.describe "hospitals" do
       json = JSON.parse(response.body)["hospital"]
       expect(json["id"]).to eq hospital.id
       expect(json["title"]).to eq hospital.title
-      expect(json["img"]).to eq hospital.img
+      expect(json["img"]["img"]["url"]).to eq hospital.img.url
       expect(json["content"]).to eq hospital.content
       expect(json["video_url"]).to eq hospital.video_url
     end

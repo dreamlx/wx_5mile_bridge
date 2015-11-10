@@ -81,3 +81,67 @@ response:
           }
         }
 ```
+## 获取医院快讯列表
+```
+curl -X GET http://localhost:3000/api/news
+```
+```
+url:    http://localhost:3000/api/news
+params: no
+response:
+        {
+          "news"=>
+          [
+            {
+              "id"=>23, 
+              "title"=>"MyString", 
+              "img"=>
+              {
+                "img"=>
+                {
+                  "url"=>"/uploads/news/img/23/rails.png", 
+                  "thumb"=>
+                  {
+                    "url"=>"/uploads/news/img/23/thumb_rails.png"
+                  }
+                }
+              }, 
+              "content"=>"MyText", 
+              "video_url"=>"MyString", 
+              "created_at"=>"2015-11-10T18:18:48.000+08:00", 
+              "updated_at"=>"2015-11-10T18:18:48.000+08:00"
+            }
+          ]
+        }
+```
+## 获取某个医院快讯
+```
+curl -X GET http://localhost:3000/api/news/{news.id}
+```
+```
+url:    http://localhost:3000/api/news/{news.id}
+params: no
+response:
+        {
+          "news"=>
+          {
+            "id"=>23, 
+            "title"=>"MyString", 
+            "img"=>
+            {
+              "img"=>
+              {
+                "url"=>"/uploads/news/img/23/rails.png", 
+                "thumb"=>
+                {
+                  "url"=>"/uploads/news/img/23/thumb_rails.png"
+                }
+              }
+            }, 
+            "content"=>"MyText", 
+            "video_url"=>"MyString", 
+            "created_at"=>"2015-11-10T18:18:48.000+08:00", 
+            "updated_at"=>"2015-11-10T18:18:48.000+08:00"
+          }
+        }
+```
