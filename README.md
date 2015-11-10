@@ -52,3 +52,32 @@ response:
           }
         }
 ```
+##获取医院信息
+```
+curl -X GET http://localhost:3000/api/hospitals/current
+```
+```
+url:    http://localhost:3000/api/hospitals/current
+params: no
+response:
+        { 
+          "hospital"=>
+          {
+            "id"=>23, 
+            "title"=>"MyString", 
+            "img"=>
+            {
+              "img"=>
+              {
+                "url"=>"/uploads/hospital/img/27/rails.png", 
+                "thumb"=>
+                {
+                  "url"=>"/uploads/hospital/img/27/thumb_rails.png"
+                }
+              }
+            }, 
+            "content"=>"MyText", 
+            "video_url"=>"MyString"
+          }
+        }
+```

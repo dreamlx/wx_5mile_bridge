@@ -22,5 +22,8 @@ Rails.application.routes.draw do
       get :doctors, on: :collection, defaults: {format: :json}
     end
     resources :doctors, only: [:index], defaults: {format: :json}
+    resources :hospitals do
+      get :current, on: :collection, defaults: {format: :json}
+    end
   end
 end
