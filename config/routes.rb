@@ -16,4 +16,11 @@ Rails.application.routes.draw do
     get :cancel, on: :member
   end
   resources :consults
+
+  namespace :api do
+    resources :users, only: [:create, :show], defaults: {format: :json} do
+      get :doctors, on: :collection, defaults: {format: :json}
+    end
+    resources :doctors, only: [:index], defaults: {format: :json}
+  end
 end

@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :doctor do
-    username "MyString"
+    username {Faker::Name.name}
     name "MyString"
     grade "MyString"
     avatar File.open(File.join(Rails.root, 'spec/fixtures/rails.png'))
