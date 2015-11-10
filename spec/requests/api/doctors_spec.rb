@@ -8,7 +8,6 @@ RSpec.describe "doctors" do
       expect(response).to be_success
       expect(response).to have_http_status(200)
       json = JSON.parse(response.body)["doctors"].first
-      expect(json).to eq ""
       expect(json["id"]).to eq doctor.id
       expect(json["name"]).to eq doctor.name
       expect(json["grade"]).to eq doctor.grade

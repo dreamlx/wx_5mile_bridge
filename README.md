@@ -17,7 +17,7 @@ response:
 ```
 ##注册
 ```
-curl -X POST -d "user[cell]xxxxxx" http://localhost:3000/api/users
+curl -X POST -d "user[cell]=xxxxxx" http://localhost:3000/api/users
 ```
 ```
 url:    http://localhost:3000/api/users
@@ -51,6 +51,21 @@ response:
             "token"=>"K731UQRa7bSAUltumrQ96HnlH1JOrDl59UmDqs24h4NpeLAcvhpdfR1PqFXntRPR+gF7TYU5RGHxrZesz5qXA=="
           }
         }
+```
+## 登录
+```
+curl -X POST -d "user[cell]=xxxxxxxxxxx&user[password]=xxxxxxxx" http://localhost:3000/api/sessions
+```
+```
+url:    http://localhost:3000/api/sessions
+params: {
+          "user"=>
+          {
+            "cell"=> "xxxxxxxxxxx",
+            "password"=>"xxxxxxxx"
+          }
+        }
+response: same as above
 ```
 ##获取医院信息
 ```
