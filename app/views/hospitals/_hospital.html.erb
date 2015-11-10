@@ -1,7 +1,7 @@
 <tr>
   <% Hospital::HEADERS.each do |column| %>
-    <%= if column == "img" %>
-      <td><%= image_tag hospital.img.thumb, hospital.img.url %></td>
+    <% if column == "img" %>
+      <td><%= link_to image_tag(hospital.img.thumb), hospital.img.url %></td>
     <% else %>
       <td><%= hospital.send(column) %></td>
     <% end %>
