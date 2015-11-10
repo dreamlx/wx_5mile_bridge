@@ -1,6 +1,10 @@
 <tr>
   <% Hospital::HEADERS.each do |column| %>
-    <td><%= hospital.send(column) %></td>
+    <%= if column == "img" %>
+      <td><%= image_tag hospital.img.thumb, hospital.img.url %></td>
+    <% else %>
+      <td><%= hospital.send(column) %></td>
+    <% end %>
   <% end %>
   <td><%= link_to t(:edit), edit_hospital_path(hospital) %></td>
   <td><%= link_to t(:publish), publish_hospital_path(hospital) %></td>
