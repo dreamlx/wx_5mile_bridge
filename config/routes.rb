@@ -27,5 +27,6 @@ Rails.application.routes.draw do
     end
     resources :news, only: [:index, :show], defaults: {format: :json}
     resources :advices, only: [:index, :show], defaults: {format: :json}
+    resources :doctors, only: [:index, :show], defaults: {format: :json}
   end
 end

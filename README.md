@@ -148,3 +148,39 @@ response:
 ## 获取健康教育列表 
 ## 获取健康教育详情 
 请参考【医院快讯】，模型从news更改成advice
+## 签约医生列表
+```
+curl -X GET http://localhost:3000/api/doctors
+```
+```
+url:    http://localhost:3000/api/doctors
+params: no
+response:
+        {
+          "doctors"=>
+          [
+            {
+              "id"=>233, 
+              "name"=>"MyString", 
+              "grade"=>"MyString", 
+              "avatar"=>
+              {
+                "avatar"=>
+                {
+                  "url"=>"/uploads/doctor/avatar/233/rails.png", 
+                  "thumb"=>
+                  {
+                    "url"=>"/uploads/doctor/avatar/233/thumb_rails.png"
+                  }
+                }
+              }, 
+              "desc"=>"MyText", 
+              "hospital"=>"MyString", 
+              "department"=>"MyString", 
+              "state"=>"正常"
+            }
+          ]
+        }
+```
+## 签约医生详情
+上面数组中的一个元素

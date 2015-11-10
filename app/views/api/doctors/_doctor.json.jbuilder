@@ -1,0 +1,1 @@
+json.(doctor, :id, :name, :grade, :avatar, :desc, :hospital, :department, :state)
