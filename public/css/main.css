@@ -1,0 +1,115 @@
+/*登录css-start*/
+.login_box {
+    padding-left: 15px;
+    font-size: 15px;
+    border-top: 1px solid #BCBCBC;
+    border-bottom: 1px solid #BCBCBC;
+    background-color: #FFF;
+}
+
+.login_box li {
+    position: relative;
+    border-top: 1px solid #BCBCBC;
+}
+
+.login_box li:first-child {
+    border-top: 0 none;
+}
+
+.login_box li label {
+    float: left;
+    width: 80px;
+    height: 44px;
+    line-height: 44px;
+}
+
+.login_box li>div {
+    position: relative;
+    height: 44px;
+    margin: 0 10px 0 80px;
+}
+
+.login_box+div {
+    margin: 10px 15px 0;
+}
+
+.login_box+div a {
+    float: right;
+    color: #099FDE;
+}
+
+.login_box li img {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    -webkit-transform: translate(100%,-50%);
+    -ms-transform: translate(100%,-50%);
+    transform: translate(100%,-50%);
+}
+/*.get-pwd-box{*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*width: 100%;*/
+/*}*/
+/*.login .get-pwd-box{*/
+    /*-webkit-transform: translate(100%, 0);*/
+    /*-ms-transform: translate(100%, 0);*/
+    /*transform: translate(100%, 0);*/
+/*}*/
+/*.login.get-pwd .get-pwd-box{*/
+    /*-webkit-transform: translate(0%, 0);*/
+    /*-ms-transform: translate(0%, 0);*/
+    /*transform: translate(0%, 0);*/
+/*}*/
+/*.login.get-pwd #login{*/
+    /*-webkit-transform: translate(-100%, 0);*/
+    /*-ms-transform: translate(-100%, 0);*/
+    /*transform: translate(-100%, 0);*/
+/*}*/
+.login #login{
+    overflow: hidden;
+}
+
+.g_btn_s {
+    color: #FFF;
+    font-size: 18px;
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    display: block;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #42bbbc;
+    -webkit-tap-highlight-color: #42bbbc
+}
+
+.clear-input-box {
+    position: relative
+}
+
+input {
+    width: 100%;
+    height: 42px;
+    border: 0;
+    padding: 0 5px;
+    background: transparent;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: 0
+}
+li{
+    list-style-type:none
+}
+/*登录css-end*/
+.err{
+    text-align: center;
+    font-size: 15px;
+    color: red;
+    display: none;
+    margin: 10px;
+}
