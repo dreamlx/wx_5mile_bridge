@@ -160,7 +160,40 @@ response:
           }
         }
 ```
-## 获取健康教育列表 
+## 获取健康教育列表
+```
+curl -X GET http://localhost:3000/api/advices
+```
+```
+url:    http://localhost:3000/api/advices
+params: {advice_type: '慢性病管理'}            #["慢性病管理", "儿保", "妇保", "计划免疫"]
+response:
+        {
+          "advices"=>
+          [
+            {
+              "id"=>12, 
+              "title"=>"MyString", 
+              "img"=>
+              {
+                "img"=>
+                {
+                  "url"=>"/uploads/advice/img/12/rails.png", 
+                  "thumb"=>
+                  {
+                    "url"=>"/uploads/advice/img/12/thumb_rails.png"
+                  }
+                }
+              }, 
+              "content"=>"MyText", 
+              "video_url"=>"MyString", 
+              "created_at"=>"2015-11-12T15:18:17.000+08:00", 
+              "updated_at"=>"2015-11-12T15:18:17.000+08:00"
+            },
+            ...
+          ]
+        }
+```
 ## 获取健康教育详情 
 请参考【医院快讯】，模型从news更改成advice
 ## 签约医生列表

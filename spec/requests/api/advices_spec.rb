@@ -21,7 +21,7 @@ RSpec.describe "advices" do
   describe "GET index" do
     it "get all published advice" do
       advice = create(:advice, state: "发布")
-      get "/api/advices"
+      get "/api/advices", {advice_type: advice.advice_type}
       expect(response).to be_success
       expect(response).to have_http_status(200)
       json = JSON.parse(response.body)["advices"].first
