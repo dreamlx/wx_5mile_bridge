@@ -11,7 +11,8 @@ class User < ActiveRecord::Base
   validates :id_no, presence: true
   validates :gender, inclusion: GENDERS, allow_nil: true
 
-  has_many :consults
+  has_many :consults, dependent: :destroy
+  has_many :appointments, dependent: :destroy
 
   before_create :generate_authentication_token
 

@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     get :cancel, on: :member
   end
   resources :consults
+  resources :appointments
 
   namespace :api do
     resources :users, only: [:create, :show], defaults: {format: :json} do
@@ -30,5 +31,6 @@ Rails.application.routes.draw do
     resources :doctors, only: [:index, :show], defaults: {format: :json}
     resources :sessions, only: [:create, :destroy], defaults: {format: :json}
     resources :consults, only: [:create, :index], defaults: {format: :json}
+    resources :appointments, only: [:create], defaults: {format: :json}
   end
 end

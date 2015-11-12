@@ -1,0 +1,13 @@
+<div class="col-md-6">
+  <%= simple_form_for(@appointment) do |f| %>
+    <%= f.input :user_id, collection: User.all %>
+    <%= f.input :doctor_id, collection: Doctor.all %>
+    <%= f.input :booking_time %>
+    <%= f.input :cell %>
+    <%= f.input :state, collection: Appointment::STATES %>
+    <%= f.button :submit %>
+  <% end %>
+</div>
+<div class="col-md-12">
+  <%= link_to t(:back), :back %>
+</div>

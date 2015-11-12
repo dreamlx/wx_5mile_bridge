@@ -279,7 +279,7 @@ response:
 ```
 ##新建咨询记录 [我要提问]
 ```
-curl -X POST --header "Authorization: Token token=#{token}, cell=xxxxxxxxxxx" -d ""
+curl -X POST --header "Authorization: Token token=#{token}, cell=xxxxxxxxxxx" -d "consult[department]=xxx..." http://localhost:3000/api/consults
 ```
 ```
 url:    http://localhost:3000/api/consults
@@ -299,6 +299,33 @@ response:
             "department"=>"妇女保健", 
             "title"=>"MyString", 
             "submit_at"=>"2015-11-12T18:10:36.565+08:00"
+          }
+        }
+```
+## 新建门诊预约
+```
+curl -X POST -d "appointment[doctor_id]=1&appointment[cell]=xx&booking_time=xxx" --header "Authorization: Token token=#{token}, cell=xxxxxxxxxxx" http://localhost:3000/api/appointments
+```
+```
+url:    http://localhost:3000/api/appointments
+params: {
+          "appointment"=>
+          {
+            "doctor_id"=>1,
+            "cell"=>"xxxxxx",
+            "booking_time"=>"2015-11-12 18:45:56"
+          }
+        }
+response:
+        {
+          "appointment"=>
+          {
+            "id"=>17, 
+            "user_id"=>131, 
+            "doctor_id"=>201, 
+            "booking_time"=>"2015-11-12T18:45:56.000+08:00", 
+            "cell"=>"MyString", 
+            "state"=>nil
           }
         }
 ```
