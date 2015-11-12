@@ -3,11 +3,18 @@
 <head>
     <title>注册</title>
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="css/dropkick.css" >
     <!--<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" ></script>-->
     <script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>
+    <script type="text/javascript" src="js/jquery.cookie.js" ></script>
+    <script type="text/javascript" src="js/jquery.dropkick-min.js"></script>
     <script type="text/javascript" src="js/register.js" ></script>
 </head>
+<style>
+
+</style>
 <body>
 
 <div id="login">
@@ -45,7 +52,11 @@
         <li>
             <label>性别</label>
             <div class="clear-input-box">
-                <input class="sex" maxlength="20" required="" tabindex="2" type="password" placeholder="您的性别"><a class="clear-input " href="javascript:;" style="display: none;"><span></span></a>
+                <!--<input class="sex" maxlength="20" required="" tabindex="2" type="password" placeholder="您的性别"><a class="clear-input " href="javascript:;" style="display: none;"><span></span></a>-->
+                <select name="state" class="default" id="sex">
+                    <option value="男" selected>男</option>
+                    <option value="女" >女</option>
+                </select>
             </div>
         </li>
         <li>
@@ -63,7 +74,11 @@
         <li>
             <label>签约医生</label>
             <div class="clear-input-box">
-                <input class="doctorname" maxlength="20" required="" tabindex="2" type="password" placeholder="签约医生"><a class="clear-input " href="javascript:;" style="display: none;"><span></span></a>
+                <!--<input class="doctorname" maxlength="20" required="" tabindex="2" type="password" placeholder="签约医生"><a class="clear-input " href="javascript:;" style="display: none;"><span></span></a>-->
+                <select name="state" class="default" id="doctor">
+                    <option value="" selected disabled>选择签约医生</option>
+                    <option value="">无</option>
+                </select>
             </div>
         </li>
     </ul>
@@ -73,8 +88,8 @@
         <p  style="padding-top:10px "><a href="javascript:void(0)"   class="login_btn" style="font-size: 16px;float: right;margin-right: 10px">登录</a></p>
     </div>
 </div>
-<div class="err">错误:<span></span></div>
 
+<div class="err">提示:<span></span></div>
 
 </body>
 </html>
