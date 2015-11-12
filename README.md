@@ -162,7 +162,7 @@ response:
 ```
 ## 获取健康教育列表
 ```
-curl -X GET http://localhost:3000/api/advices
+curl -X GET -d "advice_type=慢性病管理" http://localhost:3000/api/advices
 ```
 ```
 url:    http://localhost:3000/api/advices
