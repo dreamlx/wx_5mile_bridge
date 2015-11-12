@@ -232,3 +232,73 @@ response:
 ```
 ## 签约医生详情
 上面数组中的一个元素
+## 咨询记录列表
+```
+curl -X GET --header "Authorization: Token token=#{token}, cell=xxxxxxxxxxx" http://localhost:3000/api/consults
+```
+```
+url:    http://localhost:3000/api/consults
+params: no
+response:
+        {
+          "women"=>                           #妇女保健
+          [
+            {
+              "id"=>129, 
+              "title"=>"MyString", 
+              "user_id"=>204, 
+              "department"=>"妇女保健", 
+              "content"=>"MyText", 
+              "submit_at"=>"2015-11-12T18:01:08.000+08:00"
+            },
+            ...
+          ], 
+          "children"=>                        #儿童保健
+          [
+            {
+              "id"=>130, 
+              "title"=>"MyString", 
+              "user_id"=>205, 
+              "department"=>"儿童保健", 
+              "content"=>"MyText", 
+              "submit_at"=>"2015-11-12T18:01:08.000+08:00"
+            }
+          ], 
+          "immunes"=>                         #计划免疫
+          [
+            {
+              "id"=>131, 
+              "title"=>"MyString", 
+              "user_id"=>206, 
+              "department"=>"计划免疫", 
+              "content"=>"MyText", 
+              "submit_at"=>"2015-11-12T18:01:08.000+08:00"
+            }
+          ]
+        }
+```
+##新建咨询记录 [我要提问]
+```
+curl -X POST --header "Authorization: Token token=#{token}, cell=xxxxxxxxxxx" -d ""
+```
+```
+url:    http://localhost:3000/api/consults
+params: {
+          "consult"=>
+          {
+            "department"=>"妇女保健",
+            "title"=>"the question...."
+          }
+        }
+response:
+        {
+          "consult"=>
+          {
+            "id"=>136, 
+            "user_id"=>212, 
+            "department"=>"妇女保健", 
+            "title"=>"MyString", 
+            "submit_at"=>"2015-11-12T18:10:36.565+08:00"
+          }
+        }
+```

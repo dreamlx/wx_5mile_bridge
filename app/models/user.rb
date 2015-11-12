@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
   validates :id_no, presence: true
   validates :gender, inclusion: GENDERS, allow_nil: true
 
+  has_many :consults
+
   before_create :generate_authentication_token
 
   def generate_authentication_token

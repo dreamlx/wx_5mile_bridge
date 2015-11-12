@@ -62,7 +62,7 @@ zh-CN:
         user_id: 患者
         user: 患者
         title: 标题
-        department: 科室
+        department: 问题类别
         content: 正文
         submit_at: 提出时间
         state: 状态

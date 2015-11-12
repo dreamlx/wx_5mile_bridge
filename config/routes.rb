@@ -29,5 +29,6 @@ Rails.application.routes.draw do
     resources :advices, only: [:index, :show], defaults: {format: :json}
     resources :doctors, only: [:index, :show], defaults: {format: :json}
     resources :sessions, only: [:create, :destroy], defaults: {format: :json}
+    resources :consults, only: [:create, :index], defaults: {format: :json}
   end
 end

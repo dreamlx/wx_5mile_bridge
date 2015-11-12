@@ -20,7 +20,7 @@ class Api::BaseController < ApplicationController
 
     user_cell = options.blank?? nil : options[:cell]
     user = user_cell && User.find_by(cell: user_cell)
-
+    
     if user && ActiveSupport::SecurityUtils.secure_compare(user.authentication_token, token)
       self.current_user = user
     else
