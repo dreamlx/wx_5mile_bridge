@@ -1,0 +1,11 @@
+<tr>
+  <% Exam::HEADERS.each do |column| %>
+    <% if column == "user_id" %>
+      <td><%= exam.user.name if exam.user %></td>
+    <% else %>
+      <td><%= exam.send(column) %></td>
+    <% end %>
+  <% end %>
+  <td><%= link_to t(:edit), edit_exam_path(exam) %></td>
+  <td><%= link_to t(:destroy), exam, method: :delete, data: {confirm: t(:are_you_sure)} %></td>
+</tr>
