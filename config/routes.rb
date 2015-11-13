@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   resources :consults
   resources :appointments
   resources :exams
+  resources :shifts
   namespace :api do
     resources :users, only: [:create, :show], defaults: {format: :json} do
       get :doctors, on: :collection, defaults: {format: :json}

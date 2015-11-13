@@ -9,6 +9,7 @@ zh-CN:
       consult: 咨询记录
       appointment: 门诊预约
       exam: 体质测试预约
+      shift: 医生排班
     attributes:
       doctor:
         username: 用户名
@@ -63,9 +64,9 @@ zh-CN:
       consult:
         user_id: 患者
         user: 患者
-        title: 标题
+        title: 问题
         department: 问题类别
-        content: 正文
+        content: 答复
         submit_at: 提出时间
         state: 状态
         created_at: 创建
@@ -91,6 +92,16 @@ zh-CN:
         card_no: 社保卡号
         cell: 电话
         chronic_diseases: 慢性病
+        created_at: 创建
+        updated_at: 更新
+      shift:
+        doctor: 签约医生
+        doctor_id: 签约医生
+        date: 日期
+        from_time: 起始时间
+        to_time: 结束时间
+        category: 门诊类别
+        shift_type: 班别
         created_at: 创建
         updated_at: 更新
   5mile_bridge: 五里桥卫生院
@@ -121,3 +132,5 @@ zh-CN:
   appointment_list: 门诊预约列表
   new_exam: 新建体质测试预约
   exam_list: 体质测试预约列表
+  new_shift: 新建医生排班
+  shift_list: 医生排班列表
