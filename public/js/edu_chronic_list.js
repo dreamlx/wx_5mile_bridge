@@ -1,17 +1,19 @@
 $(document).ready(function() {
-    getNews()
+    getNews();
+
+
 
     function getNews(){
-
-        var url="http://218.244.129.63:8082/api/news/"+getUrlParam("id");
+        var url="http://218.244.129.63:8082/api/"
         $.ajax({
             url:url,
-            type:"get",
+            type:"post",
             dataType:"json",
+            data:{ },
             success:function(data){
                 var template=_.template($("#template").html());
                 $("body").html(template({data:data}));
-
+                goInfo();
 
             },
             error:function(e){
@@ -20,12 +22,12 @@ $(document).ready(function() {
         })
     }
 
-    function getUrlParam(name)//取url参数
-    {
-        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
-        var r = window.location.search.substr(1).match(reg);  //匹配目标参数
-        if (r!=null) return unescape(r[2]); return null; //返回参数值
+    function goInfo(){
+        $("li").click(function(){
+            window.location.href=" ?id="+$(this).attr("thisid");
+        });
     }
+
 
 
     function showMyToast(e,t){

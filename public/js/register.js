@@ -3,7 +3,7 @@ $(document).ready(function() {
     //showCookie();
 
     $('.btn_box p').bind('click', function() {
-        window.location.href="login.html"
+        window.location.href="user_login.html"
     });
 
     $('.btn_box button').bind('click', function() {
@@ -92,7 +92,7 @@ $(document).ready(function() {
             },
             success:function(data){
                 showMyToast("注册成功！",2000);
-                window.location.href="login.html";
+                window.location.href="user_login.html";
             },
             error:function(e){
                 showMyToast("注册失败！",2000);

@@ -6,20 +6,20 @@
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
     <script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>
     <script type="text/javascript" src="js/underscore-min.js" ></script>
-    <script type="text/javascript" src="js/news_list.js" ></script>
+    <script type="text/javascript" src="js/news_info.js" ></script>
 </head>
 <body>
 </body>
-
+<!--<div class="ico"><img src="<%=data.news.img.img.thumb.url%>"></div>-->
 <script id="template" type="text/template">
     <div class="hospitl_info">
 
-        <div class="ico"><img src="<%=data.hospital.img.img.thumb.url%>"></div>
-        <div class="title"><%=data.hospital.title%></div>
-        <div class="img"><img src="<%=data.hospital.img.img.url%>"></div>
-        <div class="content">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=data.hospital.content%></div>
-        <%if(data.hospital.video_url!=null){%>
-        <video src="<%=data.hospital.video_url%>"></video>
+
+        <div class="title"><%=data.news.title%></div>
+        <div class="img"><img src="<%=data.news.img.img.url%>"></div>
+        <div class="content">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=data.news.content%></div>
+        <%if(data.news.video_url!=null){%>
+        <video src="<%=data.news.video_url%>"></video>
         <%}%>
 
 
