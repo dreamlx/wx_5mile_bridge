@@ -10,6 +10,7 @@ zh-CN:
       appointment: 门诊预约
       exam: 体质测试预约
       shift: 医生排班
+      admin: 管理员
     attributes:
       doctor:
         username: 用户名
@@ -104,6 +105,10 @@ zh-CN:
         shift_type: 班别
         created_at: 创建
         updated_at: 更新
+      admin:
+        name: 用户名
+        password: 密码
+        password_confirmation: 确认密码
   5mile_bridge: 五里桥卫生院
   back: 返回
   are_you_sure: 请确认操作
@@ -134,3 +139,10 @@ zh-CN:
   exam_list: 体质测试预约列表
   new_shift: 新建医生排班
   shift_list: 医生排班列表
+  login: 登录
+  logout: 登出
+  please_log_in: 请登录
+  new_admin: 新建管理员
+  admin_list: 管理员列表
+  reset_password: 重设密码
+  invalid_name_or_password: 无效的用户名或密码

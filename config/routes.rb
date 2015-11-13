@@ -17,6 +17,11 @@ Rails.application.routes.draw do
   resources :appointments
   resources :exams
   resources :shifts
+  resources :admins
+  get     'login'   => 'sessions#new'
+  post    'login'   => 'sessions#create'
+  delete  'logout'  => 'sessions#destroy'
+
   namespace :api do
     resources :users, only: [:create, :show], defaults: {format: :json} do
       get :doctors, on: :collection, defaults: {format: :json}
