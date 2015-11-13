@@ -155,3 +155,34 @@ li{
 .hospitl_info .content{
     margin: 5px 0;
 }
+
+/*list*/
+.list{
+    margin: 10px 5px;
+}
+.list ul{
+    padding: 0;
+}
+.list li{
+    padding: 10px 0;
+    border-bottom: 1px solid gainsboro;
+    display: flex;
+}
+.list li img{
+    width: 40%;
+    height: 75px;
+}
+.list li div{
+    margin-left: 10px;
+    /*width: 50%;*/
+}
+.list .title{
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-left: 0;
+}
+.list .content{
+    font-size: 15px;
+    color: gray;
+    margin-left: 0;
+}

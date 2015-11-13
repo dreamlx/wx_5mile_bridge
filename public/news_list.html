@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>医院快讯</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>
+    <script type="text/javascript" src="js/underscore-min.js" ></script>
+    <script type="text/javascript" src="js/news_list.js" ></script>
+</head>
+<body>
+</body>
+
+<script id="template" type="text/template">
+
+<div class="list">
+<%if(data.news!=""){%>
+<ul>
+    <%_.each(data.news, function(v,i){ %>
+    <li thisid="<%=v.id%>">
+        <img src="<%=v.img.img.url%>">
+        <div>
+            <div class="title"><%=v.title%></div>
+            <div class="content"><%=v.content.substring(0,20)%>...</div>
+        </div>
+    </li>
+    <%})%>
+<%}%>
+</ul>
+</div>
+
+<div class="err">提示:<span></span></div>
+
+</script>
+
+</html>
