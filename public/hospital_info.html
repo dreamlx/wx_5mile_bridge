@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>医院介绍</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>
+    <!--<script type="text/javascript" src="js/jquery.cookie.js" ></script>-->
+    <script type="text/javascript" src="js/underscore-min.js" ></script>
+    <script type="text/javascript" src="js/hospital_info.js" ></script>
+</head>
+<body>
+</body>
+<!--<%for(i=0;i<5;i++){%>-->
+<!--<div>-->
+<!--<%= abcd.theas.aa%>-->
+<!--</div>-->
+<!--<%}%>-->
+<script id="template" type="text/template">
+<div class="hospitl_info">
+
+<div class="ico"><img src="<%=data.hospital.img.img.thumb.url%>"></div>
+<div class="title"><%=data.hospital.title%></div>
+<div class="img"><img src="<%=data.hospital.img.img.url%>"></div>
+<div class="content">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=data.hospital.content%></div>
+<%if(data.hospital.video_url!=null){%>
+    <video src="<%=data.hospital.video_url%>"></video>
+<%}%>
+
+
+
+</div>
+<div class="err">提示:<span></span></div>
+
+</script>
+
+</html>

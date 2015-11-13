@@ -134,3 +134,24 @@ li{
     margin: 0;
     padding: 0;
 }
+
+/*hospital_info*/
+.hospitl_info{
+    margin: 10px;
+}
+.hospitl_info .ico img{
+    width: 60px;
+    height: 60px;
+}
+.hospitl_info .title{
+    text-align: center;
+    font-size: 24px;
+    margin: 10px 0;
+}
+.hospitl_info .img img{
+    width: 100%;
+    height: auto;
+}
+.hospitl_info .content{
+    margin: 5px 0;
+}
