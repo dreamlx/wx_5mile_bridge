@@ -135,7 +135,7 @@ li{
     padding: 0;
 }
 
-/*hospital_info*/
+/*info*/
 .hospitl_info{
     margin: 10px;
 }
@@ -147,6 +147,8 @@ li{
     text-align: center;
     font-size: 24px;
     margin: 10px 0;
+    word-wrap: break-word;
+    word-break: normal;
 }
 .hospitl_info .img img{
     width: 100%;
@@ -154,6 +156,8 @@ li{
 }
 .hospitl_info .content{
     margin: 5px 0;
+    word-wrap: break-word;
+    word-break: normal;
 }
 
 /*list*/
@@ -180,9 +184,13 @@ li{
     font-size: 20px;
     margin-bottom: 5px;
     margin-left: 0;
+    word-wrap: break-word;
+    word-break: normal;
 }
 .list .content{
     font-size: 15px;
     color: gray;
     margin-left: 0;
+    word-wrap: break-word;
+    word-break: normal;
 }

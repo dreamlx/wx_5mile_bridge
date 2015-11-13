@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 
     function getList(){
-        var url="http://218.244.129.63:8082/api/advices?advice_type=慢性病管理"
+        var url="http://218.244.129.63:8082/api/advices?advice_type=计划免疫"
         $.ajax({
             url:url,
             type:"get",
