@@ -17,7 +17,7 @@ RSpec.describe "appointments" do
       expect(json["user_id"]).to eq user.id
       expect(json["doctor_id"]).to eq doctor.id
       expect(json["booking_time"].to_datetime.to_s(:db)).to eq valid_attributes[:booking_time].to_datetime.to_s(:db)
-      expect(json["state"]).to be_nil # the initial state...now is nil
+      expect(json["state"]).to eq "提交成功"
     end
   end
 end
