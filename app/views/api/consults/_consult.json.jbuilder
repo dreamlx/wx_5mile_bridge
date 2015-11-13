@@ -1,0 +1,1 @@
+json.(consult, :id, :title, :user_id, :department, :content, :submit_at)

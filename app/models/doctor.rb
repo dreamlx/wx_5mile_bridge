@@ -15,5 +15,7 @@ class Doctor < ActiveRecord::Base
   validates :password, presence: true, length: {minimum: 6}, allow_nil: true
   validates :state, presence: true, inclusion: STATES
 
+  has_many :appointments, dependent: :destroy
+
   mount_uploader :avatar, ImageUploader
 end

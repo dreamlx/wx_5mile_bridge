@@ -7,6 +7,7 @@ zh-CN:
       news: 快讯
       advice: 健康教育
       consult: 咨询记录
+      appointment: 门诊预约
     attributes:
       doctor:
         username: 用户名
@@ -62,12 +63,20 @@ zh-CN:
         user_id: 患者
         user: 患者
         title: 标题
-        department: 科室
+        department: 问题类别
         content: 正文
         submit_at: 提出时间
         state: 状态
         created_at: 创建
         updated_at: 更新
+      appointment:
+        user_id: 患者
+        user: 患者
+        doctor: 签约医生
+        doctor_id: 签约医生
+        booking_time: 预约时间
+        cell: 联系电话
+        state: 状态
   5mile_bridge: 五里桥卫生院
   back: 返回
   are_you_sure: 请确认操作
@@ -92,3 +101,5 @@ zh-CN:
   new_consult: 新建咨询记录
   consult_list: 咨询记录列表
   show: 显示
+  new_appointment: 新建门诊预约
+  appointment_list: 门诊预约列表

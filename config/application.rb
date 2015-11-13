@@ -31,6 +31,7 @@ module Wx5mileBridge
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    config.i18n.available_locales = ['zh-CN', :en]
     config.generators do |g|
       g.test_framework :rspec,
       fixtures: true,
@@ -40,6 +41,12 @@ module Wx5mileBridge
       controller_specs: false,
       request_specs: true
       g.fixture_replacement :factory_girl, dir: "spec/factories"
+    end
+    config.middleware.insert_before 0, "Rack::Cors" do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :put, :patch, :delete, :options, :head]
+      end
     end
   end
 end
