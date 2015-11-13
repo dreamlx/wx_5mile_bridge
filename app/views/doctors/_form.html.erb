@@ -6,16 +6,13 @@
       radio_buttons: :horizontal_radio_and_checkboxes,
       file: :horizontal_file_input,
       boolean: :horizontal_boolean}) do |f| %>
-    <%= f.input :username, placeholder: t(:can_not_edit) if @doctor.new_record? %>
     <%= f.input :name %>
     <%= f.input :grade %>
     <%= f.input :avatar %>
     <%= f.input :desc %>
     <%= f.input :hospital %>
     <%= f.input :department %>
-    <%= f.input :state, collection: Doctor::STATES, selected: ["正常"] %>
-    <%= f.input :password if @doctor.new_record? %>
-    <%= f.input :password_confirmation if @doctor.new_record? %>
+    <%= f.input :state, collection: Doctor::STATES %>
     <%= f.button :submit %>
   <% end %>
 </div>

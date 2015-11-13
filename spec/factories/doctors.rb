@@ -8,8 +8,6 @@ FactoryGirl.define do
     hospital "MyString"
     department "MyString"
     state "正常"
-    password "foobar"
-    password_confirmation "foobar"
   end
 
 end

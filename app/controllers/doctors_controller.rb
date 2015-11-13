@@ -13,10 +13,6 @@ class DoctorsController < ApplicationController
     end
   end
 
-  def edit_password
-    @doctor = Doctor.find(params[:id])
-  end
-
   def edit
     @doctor = Doctor.find(params[:id])
   end
@@ -42,8 +38,6 @@ class DoctorsController < ApplicationController
 
   private
     def doctor_params
-      params.require(:doctor).permit(
-        :username, :name, :grade, :avatar, :desc, :state,
-        :hospital, :department, :password, :password_confirmation)
+      params.require(:doctor).permit(:name, :grade, :avatar, :desc, :state,:hospital, :department)
     end
 end
