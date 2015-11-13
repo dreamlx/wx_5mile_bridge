@@ -21,6 +21,7 @@
         <li class="<%= 'active' if params[:controller] == 'users' %>"><%= link_to User.model_name.human, users_path %></li>
         <li class="<%= 'active' if params[:controller] == 'consults' %>"><%= link_to Consult.model_name.human, consults_path %></li>
         <li class="<%= 'active' if params[:controller] == 'appointments' %>"><%= link_to Appointment.model_name.human, appointments_path %></li>
+        <li class="<%= 'active' if params[:controller] == 'exams' %>"><%= link_to Exam.model_name.human, exams_path %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
       </ul>

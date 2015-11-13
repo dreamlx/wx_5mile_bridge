@@ -8,6 +8,7 @@ zh-CN:
       advice: 健康教育
       consult: 咨询记录
       appointment: 门诊预约
+      exam: 体质测试预约
     attributes:
       doctor:
         username: 用户名
@@ -77,6 +78,21 @@ zh-CN:
         booking_time: 预约时间
         cell: 联系电话
         state: 状态
+        created_at: 创建
+        updated_at: 更新
+      exam:
+        user_id: 患者
+        user: 患者
+        name: 姓名
+        id_no: 身份证号
+        gender: 性别
+        address: 地址
+        age: 年龄
+        card_no: 社保卡号
+        cell: 电话
+        chronic_diseases: 慢性病
+        created_at: 创建
+        updated_at: 更新
   5mile_bridge: 五里桥卫生院
   back: 返回
   are_you_sure: 请确认操作
@@ -103,3 +119,5 @@ zh-CN:
   show: 显示
   new_appointment: 新建门诊预约
   appointment_list: 门诊预约列表
+  new_exam: 新建体质测试预约
+  exam_list: 体质测试预约列表

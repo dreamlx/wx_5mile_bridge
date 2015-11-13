@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
 
   has_many :consults, dependent: :destroy
   has_many :appointments, dependent: :destroy
+  has_many :exams, dependent: :destroy
 
   before_create :generate_authentication_token
 

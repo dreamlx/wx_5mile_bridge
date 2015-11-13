@@ -329,3 +329,39 @@ response:
           }
         }
 ```
+## 新建体质测试预约
+```
+curl -X POST -d "exam[name]=xx&exam[id_no]=xx&gender=xxx...." --header "Authorization: Token token=#{token}, cell=xxxxxxxxxxx" http://localhost:3000/api/exams
+```
+```
+url:    http://localhost:3000/api/exams
+params: {
+          "exam"=>
+          {
+            "name"=>"MyString",
+            "id_no"=>"xxxxxxx",
+            "gender"=>"xxxx",
+            "address"=>"xxxxxxx",
+            "age"=>20,
+            "card_no"=>"xxxxxx"
+            "cell"=>"xxxxxx",
+            "chronic_diseases"=>"xxxxxxxxx"
+          }
+        }
+response:
+        {
+          "exam"=>
+          {
+            "id"=>2, 
+            "name"=>"MyString", 
+            "id_no"=>"MyString", 
+            "gender"=>"MyString", 
+            "address"=>"MyString", 
+            "age"=>1, 
+            "card_no"=>"MyString", 
+            "cell"=>"MyString", 
+            "chronic_diseases"=>"MyString", 
+            "created_at"=>"2015-11-13T11:48:42.874+08:00"
+          }
+        }
+```
