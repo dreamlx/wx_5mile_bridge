@@ -1,0 +1,14 @@
+<div class="col-md-6">
+  <%= simple_form_for(@shift) do |f| %>
+    <%= f.input :doctor_id, collection: Doctor.all %>
+    <%= f.input :date, html5: true %>
+    <%= f.input :from_time %>
+    <%= f.input :to_time %>
+    <%= f.input :category %>
+    <%= f.input :shift_type %>
+    <%= f.button :submit %>
+  <% end %>
+</div>
+<div class="col-md-12">
+  <%= link_to t(:back), :back %>
+</div>
