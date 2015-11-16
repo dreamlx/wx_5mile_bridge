@@ -23,7 +23,7 @@ $(document).ready(function() {
 
     function goInfo(){
         $("li").click(function(){
-            window.location.href="edu_info.html?id="+$(this).attr("thisid");
+            window.location.href="edu_info.html?id="+$(this).attr("thisid")+"&advice_type=child";
         });
     }
 

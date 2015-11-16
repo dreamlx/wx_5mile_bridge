@@ -1,7 +1,7 @@
 $(document).ready(function() {
-    getNews()
+    getInfo()
 
-    function getNews(){
+    function getInfo(){
 
         var url="http://218.244.129.63:8082/api/news/"+getUrlParam("id");
         $.ajax({
@@ -11,12 +11,18 @@ $(document).ready(function() {
             success:function(data){
                 var template=_.template($("#template").html());
                 $("body").html(template({data:data}));
-
+                back();
 
             },
             error:function(e){
                 showMyToast("获取信息失败,请刷新",1000);
             }
+        })
+    }
+
+    function back(){
+        $(".back").click(function(){
+            window.location.href="news_list.html";
         })
     }
 

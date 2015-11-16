@@ -1,9 +1,9 @@
 $(document).ready(function() {
-    getNews();
+    getList();
 
 
 
-    function getNews(){
+    function getList(){
         var url="http://218.244.129.63:8082/api/news"
         $.ajax({
             url:url,

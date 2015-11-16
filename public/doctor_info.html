@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>健康教育详情</title>
+    <title>医生详情</title>
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
     <script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>
     <script type="text/javascript" src="js/underscore-min.js" ></script>
-    <script type="text/javascript" src="js/edu_info.js" ></script>
+    <script type="text/javascript" src="js/doctor_info.js" ></script>
 </head>
 <body>
 </body>
 <!--<div class="ico"><img src="<%=data.news.img.img.thumb.url%>"></div>-->
 <script id="template" type="text/template">
-    <div class="hospitl_info">
+    <div class="doctor_info">
 
-
-        <div class="title"><%=data.advice.title%></div>
-        <div class="img"><img src="<%=data.advice.img.img.url%>"></div>
-        <div class="content">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=data.advice.content%></div>
-        <%if(data.advice.video_url!=null){%>
-        <video src="<%=data.advice.video_url%>"></video>
-        <%}%>
-
-
+        <div class="name"><%=data.doctor.name%>医生</div>
+        <div class="grade">—— <%=data.doctor.grade%></div>
+        <div class="desc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=data.doctor.desc%></div>
+        <div class="time">
+            <p>专家门诊:<span>周三下午</span></p>
+            <p>专家门诊:<span>周三下午</span></p>
+        </div>
 
     </div>
     <div class="blank"></div>

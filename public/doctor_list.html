@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>签约医生</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>
+    <script type="text/javascript" src="js/underscore-min.js" ></script>
+    <script type="text/javascript" src="js/doctor_list.js" ></script>
+</head>
+<body>
+</body>
+
+<script id="template" type="text/template">
+
+<div class="doctor_list">
+    <%if(data.doctors!=""){%>
+    <ul>
+        <%_.each(data.doctors, function(v,i){ %>
+        <li thisid="<%=v.id%>">
+            <img src="<%=v.avatar.avatar.url%>">
+            <div class="data">
+                <p>姓名:<%=v.name%></p>
+                <p>科室:<%=v.department%></p>
+                <p>职称:<%=v.grade%></p>
+                <!--<p><%=v.name%></p>-->
+                <!--<p><%=v.name%></p>-->
+                <p>专家门诊:周三下午</p>
+                <p>专家门诊:周三下午</p>
+            </div>
+            <div class="info">简介:<%=v.desc%></div>
+        </li>
+        <%})%>
+        <%}%>
+    </ul>
+</div>
+
+
+
+
+<div class="err">提示:<span></span></div>
+</script>
+</html>

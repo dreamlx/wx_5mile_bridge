@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 
     function getList(){
-        var url="http://218.244.129.63:8082/api/advices?advice_type=妇保"
+        var url="http://218.244.129.63:8082/api/doctors"
         $.ajax({
             url:url,
             type:"get",
@@ -23,7 +23,7 @@ $(document).ready(function() {
 
     function goInfo(){
         $("li").click(function(){
-            window.location.href="edu_info.html?id="+$(this).attr("thisid")+"&advice_type=woman";
+            window.location.href="doctor_info.html?id="+$(this).attr("thisid");
         });
     }
 
@@ -33,4 +33,11 @@ $(document).ready(function() {
         $(".err span").text(e);
         $(".err").show(100).delay(t).hide(100);
     }
+
+
+
+
+
+
+
 })

@@ -1,9 +1,8 @@
 $(document).ready(function() {
-    getNews()
+    getInfo()
 
-    function getNews(){
-
-        var url="http://218.244.129.63:8082/api/advices/"+getUrlParam("id");
+    function getInfo(){
+        var url="http://218.244.129.63:8082/api/doctors/"+getUrlParam("id");
         $.ajax({
             url:url,
             type:"get",
@@ -12,7 +11,6 @@ $(document).ready(function() {
                 var template=_.template($("#template").html());
                 $("body").html(template({data:data}));
                 back();
-
             },
             error:function(e){
                 showMyToast("获取信息失败,请刷新",1000);
@@ -22,18 +20,7 @@ $(document).ready(function() {
 
     function back(){
         $(".back").click(function(){
-            if(getUrlParam("advice_type")=="chronic"){
-                window.location.href="edu_chronic_list.html";
-            }
-            if(getUrlParam("advice_type")=="child"){
-                window.location.href="edu_child_list.html";
-            }
-            if(getUrlParam("advice_type")=="woman"){
-                window.location.href="edu_woman_list.html";
-            }
-            if(getUrlParam("advice_type")=="plan"){
-                window.location.href="edu_plan_list.html";
-            }
+            window.location.href="doctor_list.html";
         })
     }
 
