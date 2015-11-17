@@ -249,7 +249,8 @@ response:
               "user_id"=>204, 
               "department"=>"妇女保健", 
               "content"=>"MyText", 
-              "submit_at"=>"2015-11-12T18:01:08.000+08:00"
+              "submit_at"=>"2015-11-12T18:01:08.000+08:00",
+              "user_name"=>"MyString"
             },
             ...
           ], 
@@ -261,7 +262,8 @@ response:
               "user_id"=>205, 
               "department"=>"儿童保健", 
               "content"=>"MyText", 
-              "submit_at"=>"2015-11-12T18:01:08.000+08:00"
+              "submit_at"=>"2015-11-12T18:01:08.000+08:00",
+              "user_name"=>"MyString"
             }
           ], 
           "immunes"=>                         #计划免疫
@@ -272,7 +274,8 @@ response:
               "user_id"=>206, 
               "department"=>"计划免疫", 
               "content"=>"MyText", 
-              "submit_at"=>"2015-11-12T18:01:08.000+08:00"
+              "submit_at"=>"2015-11-12T18:01:08.000+08:00",
+              "user_name"=>"MyString"
             }
           ]
         }
